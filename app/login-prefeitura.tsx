@@ -1,0 +1,126 @@
+import React, { useState } from 'react';
+
+import {
+    Alert,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
+} from 'react-native';
+
+import { useRouter } from 'expo-router';
+
+export default function LoginPrefeitura() {
+
+  const router = useRouter();
+
+  const [usuario, setUsuario] = useState('');
+  const [senha, setSenha] = useState('');
+
+  function entrar() {
+
+    if (
+      usuario === 'prefeitura' &&
+      senha === '123'
+    ) {
+
+      router.push('/prefeitura');
+
+    } else {
+
+      Alert.alert(
+        'Erro',
+        'Usuário ou senha inválidos'
+      );
+    }
+  }
+
+  return (
+    <View style={styles.container}>
+
+      <Text style={styles.title}>
+        Login Prefeitura
+      </Text>
+
+      <TextInput
+        style={styles.input}
+        placeholder="Usuário"
+        value={usuario}
+        onChangeText={setUsuario}
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Senha"
+        secureTextEntry
+        value={senha}
+        onChangeText={setSenha}
+      />
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={entrar}
+      >
+        <Text style={styles.buttonText}>
+          Entrar
+        </Text>
+      </TouchableOpacity>
+
+      <Text style={styles.info}>
+        usuário: prefeitura
+      </Text>
+
+      <Text style={styles.info}>
+        senha: 123
+      </Text>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+    backgroundColor: '#e9ecef',
+  },
+
+  title: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 30,
+    color: '#28a745',
+  },
+
+  input: {
+    backgroundColor: '#fff',
+    padding: 15,
+    borderRadius: 12,
+    marginBottom: 20,
+    fontSize: 16,
+  },
+
+  button: {
+    backgroundColor: '#28a745',
+    padding: 15,
+    borderRadius: 12,
+  },
+
+  buttonText: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+
+  info: {
+    textAlign: 'center',
+    marginTop: 15,
+    color: '#555',
+  },
+
+});
