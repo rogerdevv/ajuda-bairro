@@ -1,50 +1,97 @@
-# Welcome to your Expo app 👋
+# Ajuda Bairro
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Descrição
 
-## Get started
+O Ajuda Bairro é um aplicativo mobile desenvolvido em React Native com Expo para facilitar a comunicação entre cidadãos e a prefeitura no registro e acompanhamento de problemas urbanos.
 
-1. Install dependencies
+O sistema permite que moradores registrem ocorrências em seus bairros e que a prefeitura acompanhe, atualize e resolva os chamados.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## Objetivo
 
-   ```bash
-   npx expo start
-   ```
+Criar uma solução simples e eficiente para o registro e gerenciamento de problemas urbanos, promovendo uma comunicação mais rápida entre a população e os órgãos públicos.
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Funcionalidades
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Área do Cidadão
 
-## Get a fresh project
+* Login de acesso
+* Cadastro de problemas urbanos
+* Informar bairro
+* Informar cidade
+* Informar CEP
+* Informar localização
+* Informar quantidade de fotos anexadas
+* Visualização dos chamados cadastrados
+* Edição de chamados
+* Exclusão de chamados
+* Acompanhamento do status do atendimento
+* Visualização de observações da prefeitura
 
-When you're ready, run:
+### Área da Prefeitura
 
-```bash
-npm run reset-project
-```
+* Login administrativo
+* Visualização de todos os chamados
+* Alteração de status:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+  * Pendente
+  * Em andamento
+  * Resolvido
+* Inclusão de observações para os cidadãos
+* Controle e gerenciamento das ocorrências
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## Tecnologias Utilizadas
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* React Native
+* Expo
+* Expo Router
+* AsyncStorage
+* JavaScript
+* Git
+* GitHub
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## Estrutura do Projeto
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* Área do Cidadão
+* Área da Prefeitura
+* Sistema de Login
+* Cadastro de Ocorrências
+* Gerenciamento de Status
+* Persistência de Dados Local
+
+---
+
+## Fluxo do Sistema
+
+1. O cidadão realiza login.
+2. O cidadão registra uma ocorrência.
+3. A ocorrência é armazenada no aplicativo.
+4. A prefeitura visualiza os chamados.
+5. A prefeitura altera o status do atendimento.
+6. O cidadão acompanha o andamento da solicitação.
+
+---
+
+## Melhorias Futuras
+
+* Integração com banco de dados online
+* Upload real de fotos
+* Geolocalização automática
+* Notificações push
+* Login com autenticação real
+* Painel administrativo web
+* Integração com APIs municipais
+
+---
+
+## Desenvolvedor
+
+Projeto desenvolvido por Roger Fagundes como atividade acadêmica e protótipo de solução para gestão urbana.
+
